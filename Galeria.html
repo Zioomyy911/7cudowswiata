@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>7 cudów świata</title>
+
+</head>
+<body>
+    <header><h1>Zdjęcia 7 cudów świata</h1></header>
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="Galeria.html">Galeria</a>
+        <a href="Ankieta.html">Ankieta</a>
+    </nav>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 7</div>
+          <img src="fotos/piramida.jpg" style="width:100%">
+          <div class="text">Piramida Cheopsa</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 7</div>
+          <img src="fotos/ogrody.jpg" style="width:100%">
+          <div class="text">Wiszące ogrody</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 7</div>
+          <img src="fotos/artemida.jpg" style="width:100%">
+          <div class="text">Świątynia Artemidy</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 7</div>
+            <img src="fotos/zeus.jpg" style="width:100%">
+            <div class="text">Posąg Zeusa</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 7</div>
+            <img src="fotos/mauzoleum.jpg" style="width:100%">
+            <div class="text">Mauzoleum w Halikarnasie</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 7</div>
+            <img src="fotos/kolos.jpg" style="width:100%">
+            <div class="text">Kolos Rodyjski</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 7</div>
+            <img src="fotos/faros.jpg" style="width:100%">
+            <div class="text">Latarnia morska na Faros</div>
+        </div>
+        <p class="prev" onclick="plusSlides(-1)">❮</p>
+        <p class="next" onclick="plusSlides(1)">❯</p>
+        
+        </div>
+       <br>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span> 
+        </div>
+        <footer>
+            <p>Stronę wykonał: Ziemowit Grodkowski</p>
+        </footer>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+
+        
+</body>
+</html> 
