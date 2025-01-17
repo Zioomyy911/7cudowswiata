@@ -228,6 +228,11 @@ th {
     header, footer {
         font-size: 1.2em;
     }
+    main,footer{
+        background-color:black;
+    }
+
+
 }
 
 
